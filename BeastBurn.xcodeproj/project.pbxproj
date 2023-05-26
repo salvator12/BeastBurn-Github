@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA004C952A1CF20400CE782F /* CoreFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA004C942A1CF20400CE782F /* CoreFeaturesView.swift */; };
+		FA030D622A1D2897004907AF /* MonsterGameVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA030D612A1D2897004907AF /* MonsterGameVIew.swift */; };
+		FA0C3CC12A16821B00FBCEF8 /* WorkOutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C3CC02A16821B00FBCEF8 /* WorkOutSession.swift */; };
+		FA0C802F2A1FA974000721E0 /* SoundPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C802E2A1FA974000721E0 /* SoundPlaying.swift */; };
+		FA0C80312A1FACF0000721E0 /* SoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C80302A1FACF0000721E0 /* SoundController.swift */; };
+		FA0C80372A1FBBEE000721E0 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA0C80332A1FBBEE000721E0 /* 3.mp3 */; };
+		FA0C80382A1FBBEE000721E0 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA0C80342A1FBBEE000721E0 /* 1.mp3 */; };
+		FA0C80392A1FBBEE000721E0 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA0C80352A1FBBEE000721E0 /* 2.mp3 */; };
+		FA0C803A2A1FBBEE000721E0 /* Go.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA0C80362A1FBBEE000721E0 /* Go.mp3 */; };
+		FA38880C2A1C638300424AB0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38880B2A1C638300424AB0 /* CountdownView.swift */; };
+		FA3AE9D02A1BCA17009F90AD /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AE9CF2A1BCA17009F90AD /* InfoView.swift */; };
+		FA4236172A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA4236152A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodeld */; };
+		FA42361B2A1EFF45005DC1B2 /* HSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42361A2A1EFF45005DC1B2 /* HSController.swift */; };
+		FA4A93B82A1DBD80005CD605 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A93B72A1DBD80005CD605 /* SummaryView.swift */; };
+		FAB26A3D2A1CF9F9005011B0 /* WorkoutControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB26A3C2A1CF9F9005011B0 /* WorkoutControlView.swift */; };
+		FAB7AEAA2A1769AA00F2E42C /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7AEA92A1769AA00F2E42C /* WorkoutView.swift */; };
+		FACD197F2A1677E700956903 /* BeastBurn Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FACD197E2A1677E700956903 /* BeastBurn Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FACD19842A1677E700956903 /* HeartRateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD19832A1677E700956903 /* HeartRateApp.swift */; };
+		FACD19882A1677E800956903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD19872A1677E800956903 /* Assets.xcassets */; };
+		FACD198B2A1677E800956903 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD198A2A1677E800956903 /* Preview Assets.xcassets */; };
+		FAD8F5D22A1B523C00206396 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8F5D12A1B523C00206396 /* MainPageView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FACD19802A1677E700956903 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACD19722A1677E700956903 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACD197D2A1677E700956903;
+			remoteInfo = "HeartRate Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FACD19912A1677E800956903 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FACD197F2A1677E700956903 /* BeastBurn Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA004C942A1CF20400CE782F /* CoreFeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreFeaturesView.swift; sourceTree = "<group>"; };
+		FA030D612A1D2897004907AF /* MonsterGameVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterGameVIew.swift; sourceTree = "<group>"; };
+		FA0C3CC02A16821B00FBCEF8 /* WorkOutSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutSession.swift; sourceTree = "<group>"; };
+		FA0C802E2A1FA974000721E0 /* SoundPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlaying.swift; sourceTree = "<group>"; };
+		FA0C80302A1FACF0000721E0 /* SoundController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundController.swift; sourceTree = "<group>"; };
+		FA0C80322A1FB270000721E0 /* BeastBurn-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeastBurn-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FA0C80332A1FBBEE000721E0 /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
+		FA0C80342A1FBBEE000721E0 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		FA0C80352A1FBBEE000721E0 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
+		FA0C80362A1FBBEE000721E0 /* Go.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Go.mp3; sourceTree = "<group>"; };
+		FA38880B2A1C638300424AB0 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		FA3AE9CF2A1BCA17009F90AD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		FA4236162A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HighScoreModel.xcdatamodel; sourceTree = "<group>"; };
+		FA42361A2A1EFF45005DC1B2 /* HSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSController.swift; sourceTree = "<group>"; };
+		FA4A93B72A1DBD80005CD605 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		FAB26A3C2A1CF9F9005011B0 /* WorkoutControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutControlView.swift; sourceTree = "<group>"; };
+		FAB7AEA92A1769AA00F2E42C /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		FACD19782A1677E700956903 /* BeastBurn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeastBurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACD197E2A1677E700956903 /* BeastBurn Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeastBurn Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACD19832A1677E700956903 /* HeartRateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateApp.swift; sourceTree = "<group>"; };
+		FACD19872A1677E800956903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FACD198A2A1677E800956903 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FACD19952A16781A00956903 /* BeastBurn Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BeastBurn Watch App.entitlements"; sourceTree = "<group>"; };
+		FAD8F5D12A1B523C00206396 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FACD197B2A1677E700956903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA38880D2A1C71D800424AB0 /* Audio BeastBurn */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C80342A1FBBEE000721E0 /* 1.mp3 */,
+				FA0C80352A1FBBEE000721E0 /* 2.mp3 */,
+				FA0C80332A1FBBEE000721E0 /* 3.mp3 */,
+				FA0C80362A1FBBEE000721E0 /* Go.mp3 */,
+			);
+			path = "Audio BeastBurn";
+			sourceTree = "<group>";
+		};
+		FA4236182A1EFEEB005DC1B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA4236152A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA4236192A1EFF2D005DC1B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C3CC02A16821B00FBCEF8 /* WorkOutSession.swift */,
+				FA42361A2A1EFF45005DC1B2 /* HSController.swift */,
+				FA0C80302A1FACF0000721E0 /* SoundController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAB26A3A2A1CF59E005011B0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C802E2A1FA974000721E0 /* SoundPlaying.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FAB26A3B2A1CF5B7005011B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA38880B2A1C638300424AB0 /* CountdownView.swift */,
+				FA004C942A1CF20400CE782F /* CoreFeaturesView.swift */,
+				FA3AE9CF2A1BCA17009F90AD /* InfoView.swift */,
+				FAD8F5D12A1B523C00206396 /* MainPageView.swift */,
+				FA030D612A1D2897004907AF /* MonsterGameVIew.swift */,
+				FA4A93B72A1DBD80005CD605 /* SummaryView.swift */,
+				FAB7AEA92A1769AA00F2E42C /* WorkoutView.swift */,
+				FAB26A3C2A1CF9F9005011B0 /* WorkoutControlView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FACD19712A1677E700956903 = {
+			isa = PBXGroup;
+			children = (
+				FACD19822A1677E700956903 /* BeastBurn Watch App */,
+				FACD19792A1677E700956903 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACD19792A1677E700956903 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACD19782A1677E700956903 /* BeastBurn.app */,
+				FACD197E2A1677E700956903 /* BeastBurn Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACD19822A1677E700956903 /* BeastBurn Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C80322A1FB270000721E0 /* BeastBurn-Watch-App-Info.plist */,
+				FA4236192A1EFF2D005DC1B2 /* Controller */,
+				FA4236182A1EFEEB005DC1B2 /* Model */,
+				FAB26A3B2A1CF5B7005011B0 /* View */,
+				FAB26A3A2A1CF59E005011B0 /* Utilities */,
+				FACD19952A16781A00956903 /* BeastBurn Watch App.entitlements */,
+				FACD19832A1677E700956903 /* HeartRateApp.swift */,
+				FACD19872A1677E800956903 /* Assets.xcassets */,
+				FACD19892A1677E800956903 /* Preview Content */,
+				FA38880D2A1C71D800424AB0 /* Audio BeastBurn */,
+			);
+			path = "BeastBurn Watch App";
+			sourceTree = "<group>";
+		};
+		FACD19892A1677E800956903 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FACD198A2A1677E800956903 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FACD19772A1677E700956903 /* BeastBurn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACD19922A1677E800956903 /* Build configuration list for PBXNativeTarget "BeastBurn" */;
+			buildPhases = (
+				FACD19762A1677E700956903 /* Resources */,
+				FACD19912A1677E800956903 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACD19812A1677E700956903 /* PBXTargetDependency */,
+			);
+			name = BeastBurn;
+			productName = HeartRate;
+			productReference = FACD19782A1677E700956903 /* BeastBurn.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		FACD197D2A1677E700956903 /* BeastBurn Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACD198E2A1677E800956903 /* Build configuration list for PBXNativeTarget "BeastBurn Watch App" */;
+			buildPhases = (
+				FACD197A2A1677E700956903 /* Sources */,
+				FACD197B2A1677E700956903 /* Frameworks */,
+				FACD197C2A1677E700956903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BeastBurn Watch App";
+			productName = "HeartRate Watch App";
+			productReference = FACD197E2A1677E700956903 /* BeastBurn Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FACD19722A1677E700956903 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FACD19772A1677E700956903 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					FACD197D2A1677E700956903 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = FACD19752A1677E700956903 /* Build configuration list for PBXProject "BeastBurn" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FACD19712A1677E700956903;
+			productRefGroup = FACD19792A1677E700956903 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FACD19772A1677E700956903 /* BeastBurn */,
+				FACD197D2A1677E700956903 /* BeastBurn Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FACD19762A1677E700956903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACD197C2A1677E700956903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0C803A2A1FBBEE000721E0 /* Go.mp3 in Resources */,
+				FA0C80382A1FBBEE000721E0 /* 1.mp3 in Resources */,
+				FA0C80372A1FBBEE000721E0 /* 3.mp3 in Resources */,
+				FA0C80392A1FBBEE000721E0 /* 2.mp3 in Resources */,
+				FACD198B2A1677E800956903 /* Preview Assets.xcassets in Resources */,
+				FACD19882A1677E800956903 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FACD197A2A1677E700956903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4236172A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodeld in Sources */,
+				FA0C80312A1FACF0000721E0 /* SoundController.swift in Sources */,
+				FAB26A3D2A1CF9F9005011B0 /* WorkoutControlView.swift in Sources */,
+				FACD19842A1677E700956903 /* HeartRateApp.swift in Sources */,
+				FAB7AEAA2A1769AA00F2E42C /* WorkoutView.swift in Sources */,
+				FA38880C2A1C638300424AB0 /* CountdownView.swift in Sources */,
+				FA42361B2A1EFF45005DC1B2 /* HSController.swift in Sources */,
+				FA0C802F2A1FA974000721E0 /* SoundPlaying.swift in Sources */,
+				FAD8F5D22A1B523C00206396 /* MainPageView.swift in Sources */,
+				FA004C952A1CF20400CE782F /* CoreFeaturesView.swift in Sources */,
+				FA0C3CC12A16821B00FBCEF8 /* WorkOutSession.swift in Sources */,
+				FA3AE9D02A1BCA17009F90AD /* InfoView.swift in Sources */,
+				FA030D622A1D2897004907AF /* MonsterGameVIew.swift in Sources */,
+				FA4A93B82A1DBD80005CD605 /* SummaryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FACD19812A1677E700956903 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACD197D2A1677E700956903 /* BeastBurn Watch App */;
+			targetProxy = FACD19802A1677E700956903 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FACD198C2A1677E800956903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FACD198D2A1677E800956903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FACD198F2A1677E800956903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "BeastBurn Watch App/BeastBurn Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BeastBurn Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = FPC4M9S2JR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BeastBurn-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BeastBurn;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "heart rate for reduced monster health and show the average heart rate during the activity to kill a monster, active energy to show your calories during the activity to kill a monster, distances to show your total distances during the activity to kill a monster";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "heart rate for reduced monster health and show the average heart rate during the activity to kill a monster, active energy to show your calories during the activity to kill a monster, distances to show your total distances during the activity to kill a monster";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "heart rate for reduced monster health and show the average heart rate during the activity to kill a monster, active energy to show your calories during the activity to kill a monster, distances to show your total distances during the activity to kill a monster";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hezki.BeastBurn.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		FACD19902A1677E800956903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "BeastBurn Watch App/BeastBurn Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BeastBurn Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = FPC4M9S2JR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BeastBurn-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BeastBurn;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "heart rate for reduced monster health and show the average heart rate during the activity to kill a monster, active energy to show your calories during the activity to kill a monster, distances to show your total distances during the activity to kill a monster";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "heart rate for reduced monster health and show the average heart rate during the activity to kill a monster, active energy to show your calories during the activity to kill a monster, distances to show your total distances during the activity to kill a monster";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "heart rate for reduced monster health and show the average heart rate during the activity to kill a monster, active energy to show your calories during the activity to kill a monster, distances to show your total distances during the activity to kill a monster";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hezki.BeastBurn.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		FACD19932A1677E800956903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FPC4M9S2JR;
+				INFOPLIST_KEY_CFBundleDisplayName = BeastBurn;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hezki.BeastBurn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FACD19942A1677E800956903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FPC4M9S2JR;
+				INFOPLIST_KEY_CFBundleDisplayName = BeastBurn;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Hezki.BeastBurn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FACD19752A1677E700956903 /* Build configuration list for PBXProject "BeastBurn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACD198C2A1677E800956903 /* Debug */,
+				FACD198D2A1677E800956903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACD198E2A1677E800956903 /* Build configuration list for PBXNativeTarget "BeastBurn Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACD198F2A1677E800956903 /* Debug */,
+				FACD19902A1677E800956903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACD19922A1677E800956903 /* Build configuration list for PBXNativeTarget "BeastBurn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACD19932A1677E800956903 /* Debug */,
+				FACD19942A1677E800956903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA4236152A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA4236162A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodel */,
+			);
+			currentVersion = FA4236162A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodel */;
+			path = HighScoreModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FACD19722A1677E700956903 /* Project object */;
+}
