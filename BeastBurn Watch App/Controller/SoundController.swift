@@ -6,10 +6,12 @@
 //
 
 import AVFoundation
+import WatchKit
+
 
 class SoundController: ObservableObject, SoundPlaying {
     var audioPlayer: AVAudioPlayer?
-    
+    var session: AVAudioSession = AVAudioSession.sharedInstance()
     
     func countdown3() {
         playSound(name: "3")
@@ -24,5 +26,21 @@ class SoundController: ObservableObject, SoundPlaying {
     }
     func countdownGo() {
         playSound(name: "Go")
+    }
+    
+    func heal() {
+        playSound(name: "heal-up")
+    }
+    
+    func hitMonster() {
+        playSound(name: "hit")
+    }
+    
+    func gameOver() {
+        playSound(name: "gameOver")
+    }
+    
+    func win() {
+        playSound(name: "win")
     }
 }

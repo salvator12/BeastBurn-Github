@@ -16,9 +16,9 @@ struct WorkoutView: View {
     let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             if workoutSession.status == .inProgress {
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 3) {
                     Text("\(workoutSession.timerFormatter(countTimer: countTimer))").foregroundColor(Color("mainButton")).font(.system(size: 30))
                         .onReceive(timer) { _ in
                         if workoutSession.status == .inProgress {
@@ -27,8 +27,8 @@ struct WorkoutView: View {
                     }
                     
                     if workoutSession.bpm != 0 {
-                        HStack {
-                            Image(systemName: "heart.fill").foregroundColor(.red)
+                        HStack(spacing: 8) {
+                            Image(systemName: "heart.fill").resizable().frame(width: 20, height: 20).foregroundColor(.red)
                             HStack {
                                 Text(workoutSession.heartbeatFormatter()).font(.system(size: 25)).foregroundColor(Color("softWhite"))
                                 Text("BPM").font(.system(size: 20)).foregroundColor(Color("softWhite"))
@@ -36,8 +36,8 @@ struct WorkoutView: View {
                             
                         }
                     } else {
-                        HStack {
-                            Image(systemName: "heart.fill").foregroundColor(.red)
+                        HStack(spacing: 8) {
+                            Image(systemName: "heart.fill").resizable().frame(width: 20, height: 20).foregroundColor(.red)
                             HStack {
                                 Text("--").font(.system(size: 25)).foregroundColor(Color("softWhite"))
                                 Text("BPM").font(.system(size: 20)).foregroundColor(Color("softWhite"))
@@ -47,15 +47,15 @@ struct WorkoutView: View {
                     }
                     
                     if workoutSession.energyBurned != nil {
-                        HStack {
-                            Image(systemName: "flame").foregroundColor(Color("flame"))
+                        HStack(spacing: 8) {
+                            Image(systemName: "flame").resizable().frame(width: 20, height: 25).foregroundColor(Color("flame"))
                             Text("\(workoutSession.kcalFormatter())").font(.system(size: 25)).foregroundColor(Color("softWhite"))
                             Text("Kcal").font(.system(size: 20)).foregroundColor(Color("softWhite"))
                             
                         }
                     } else {
-                        HStack {
-                            Image(systemName: "flame").foregroundColor(Color("flame"))
+                        HStack(spacing: 8) {
+                            Image(systemName: "flame").resizable().frame(width: 20, height: 25).foregroundColor(Color("flame"))
                             Text("--").font(.system(size: 25)).foregroundColor(Color("softWhite"))
                             Text("Kcal").font(.system(size: 20)).foregroundColor(Color("softWhite"))
                         }
@@ -63,14 +63,14 @@ struct WorkoutView: View {
                     }
                     
                     if workoutSession.distance != nil {
-                        HStack {
-                            Image(systemName: "ruler").foregroundColor(Color("distance"))
+                        HStack(spacing: 8) {
+                            Image(systemName: "ruler").resizable().resizable().frame(width: 25, height: 15).foregroundColor(Color("distance"))
                             Text(workoutSession.distanceFormatter()).font(.system(size: 25)).foregroundColor(Color("softWhite"))
                             Text("KM").font(.system(size: 20)).foregroundColor(Color("softWhite"))
                         }
                     } else {
-                        HStack {
-                            Image(systemName: "ruler").foregroundColor(Color("distance"))
+                        HStack(spacing: 8) {
+                            Image(systemName: "ruler").resizable().frame(width: 25, height: 15).foregroundColor(Color("distance"))
                             Text("--").font(.system(size: 25)).foregroundColor(Color("softWhite"))
                             Text("KM").font(.system(size: 20)).foregroundColor(Color("softWhite"))
                         }
@@ -79,15 +79,20 @@ struct WorkoutView: View {
                 Button {
                     workoutSession.pauseWorkout()
                 } label: {
-                    Text("Pause").frame(maxWidth: 150, maxHeight: 30).font(.system(size: 20, weight: .semibold)).background(Color("workoutControlPauseResume")).foregroundColor(Color("workoutControlFont")).cornerRadius(8).padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                    Text("PAUSE").frame(maxWidth: 150, maxHeight: 30).font(.system(size: 20, weight: .semibold)).background(Color("workoutControlPauseResume")).foregroundColor(Color("workoutControlFont")).cornerRadius(8).padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                 }.buttonStyle(PlainButtonStyle())
             } else if workoutSession.status == .paused {
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 3) {
                     Text("\(workoutSession.timerFormatter(countTimer: countTimer))").foregroundColor(Color("mainButton")).font(.system(size: 30))
+                        .onReceive(timer) { _ in
+                        if workoutSession.status == .inProgress {
+                            countTimer += 1
+                        }
+                    }
                     
                     if workoutSession.bpm != 0 {
-                        HStack {
-                            Image(systemName: "heart.fill").foregroundColor(.red)
+                        HStack(spacing: 8) {
+                            Image(systemName: "heart.fill").resizable().frame(width: 20, height: 20).foregroundColor(.red)
                             HStack {
                                 Text(workoutSession.heartbeatFormatter()).font(.system(size: 25)).foregroundColor(Color("softWhite"))
                                 Text("BPM").font(.system(size: 20)).foregroundColor(Color("softWhite"))
@@ -95,8 +100,8 @@ struct WorkoutView: View {
                             
                         }
                     } else {
-                        HStack {
-                            Image(systemName: "heart.fill").foregroundColor(.red)
+                        HStack(spacing: 8) {
+                            Image(systemName: "heart.fill").resizable().frame(width: 20, height: 20).foregroundColor(.red)
                             HStack {
                                 Text("--").font(.system(size: 25)).foregroundColor(Color("softWhite"))
                                 Text("BPM").font(.system(size: 20)).foregroundColor(Color("softWhite"))
@@ -106,15 +111,15 @@ struct WorkoutView: View {
                     }
                     
                     if workoutSession.energyBurned != nil {
-                        HStack {
-                            Image(systemName: "flame").foregroundColor(Color("flame"))
+                        HStack(spacing: 8) {
+                            Image(systemName: "flame").resizable().frame(width: 20, height: 25).foregroundColor(Color("flame"))
                             Text("\(workoutSession.kcalFormatter())").font(.system(size: 25)).foregroundColor(Color("softWhite"))
                             Text("Kcal").font(.system(size: 20)).foregroundColor(Color("softWhite"))
                             
                         }
                     } else {
-                        HStack {
-                            Image(systemName: "flame").foregroundColor(Color("flame"))
+                        HStack(spacing: 8) {
+                            Image(systemName: "flame").resizable().frame(width: 20, height: 25).foregroundColor(Color("flame"))
                             Text("--").font(.system(size: 25)).foregroundColor(Color("softWhite"))
                             Text("Kcal").font(.system(size: 20)).foregroundColor(Color("softWhite"))
                         }
@@ -122,14 +127,14 @@ struct WorkoutView: View {
                     }
                     
                     if workoutSession.distance != nil {
-                        HStack {
-                            Image(systemName: "ruler").foregroundColor(Color("distance"))
+                        HStack(spacing: 8) {
+                            Image(systemName: "ruler").resizable().resizable().frame(width: 25, height: 15).foregroundColor(Color("distance"))
                             Text(workoutSession.distanceFormatter()).font(.system(size: 25)).foregroundColor(Color("softWhite"))
                             Text("KM").font(.system(size: 20)).foregroundColor(Color("softWhite"))
                         }
                     } else {
-                        HStack {
-                            Image(systemName: "ruler").foregroundColor(Color("distance"))
+                        HStack(spacing: 8) {
+                            Image(systemName: "ruler").resizable().frame(width: 25, height: 15).foregroundColor(Color("distance"))
                             Text("--").font(.system(size: 25)).foregroundColor(Color("softWhite"))
                             Text("KM").font(.system(size: 20)).foregroundColor(Color("softWhite"))
                         }
@@ -139,9 +144,17 @@ struct WorkoutView: View {
                 Button {
                     workoutSession.resumeWorkout()
                 } label: {
-                    Text("Resume").frame(maxWidth: 150, maxHeight: 30).font(.system(size: 20, weight: .semibold)).background(Color("workoutControlPauseResume")).foregroundColor(Color("workoutControlFont")).cornerRadius(8).padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                    Text("RESUME").frame(maxWidth: 150, maxHeight: 30).font(.system(size: 20, weight: .semibold)).background(Color("workoutControlPauseResume")).foregroundColor(Color("workoutControlFont")).cornerRadius(8).padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                 }.buttonStyle(PlainButtonStyle())
             }
+//            HStack{
+//                Circle()
+//                    .frame(width: 8, height: 8)
+//                    .foregroundColor(Color.white)
+//                Circle()
+//                    .frame(width: 8, height: 8)
+//                    .foregroundColor(Color.gray)
+//            }
         }
     }
 }

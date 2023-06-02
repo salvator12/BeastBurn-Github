@@ -11,7 +11,7 @@ struct CountdownView: View {
     @State private var scale = 0.5
     @State private var count = 4
     @State private var fadeIn = false
-    @ObservedObject var soundController = SoundController()
+    @StateObject var soundController = SoundController()
     @Binding var ageInput: Int
     
     var maxHeartRate: Int = 0
@@ -19,7 +19,7 @@ struct CountdownView: View {
     
     var body: some View {
         if count == 0 {
-            CoreFeaturesView(ageInput: $ageInput, maxHeartRate: maxHeartRate).opacity(fadeIn ? 1 : 0).onAppear {
+            CoreFeaturesView(soundController: soundController, ageInput: $ageInput, maxHeartRate: maxHeartRate).opacity(fadeIn ? 1 : 0).onAppear {
                 withAnimation(Animation.easeIn(duration: 1.0)) {
                     fadeIn.toggle()
                 }
@@ -30,14 +30,11 @@ struct CountdownView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         if count-1 == 3 {
                             soundController.countdown3()
-                        }
-                        if count-1 == 2 {
+                        }else if count-1 == 2 {
                             soundController.countdown2()
-                        }
-                        if count-1 == 1 {
+                        }else if count-1 == 1 {
                             soundController.countdown1()
-                        }
-                        if count-1 == 0 {
+                        }else if count-1 == 0 {
                             soundController.countdownGo()
                         }
                         count -= 1

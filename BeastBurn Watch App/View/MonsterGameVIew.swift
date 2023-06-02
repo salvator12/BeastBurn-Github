@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MonsterGameVIew: View {
     @ObservedObject var workoutSession: WorkoutSession
-    @ObservedObject var sounController = SoundController()
+    @ObservedObject var sounController: SoundController
     @Binding var percentHealth: Int
     @Binding var goToSummary: Bool
     @State var heartRateLow: Bool = false
@@ -17,30 +17,26 @@ struct MonsterGameVIew: View {
     @State var NotReducedBefore: Bool = true
     var maxHeartRate: Int = 0
     var body: some View {
-        if workoutSession.status == .inProgress {
-            VStack(spacing: 10) {
-                Spacer()
-                
-                if heartRateLow {
-                    HStack {
-                        Image(systemName: "exclamationmark.triangle")
-                        Text("heart rate too low")
-                    }
-                } else if heartRateHigh {
-                    HStack {
-                        Image(systemName: "exclamationmark.triangle")
-                        Text("heart rate too high")
-                    }
-                    
-                }
-
-                Image("monster").resizable().frame(width: 110, height: 130)
+        VStack(spacing: 10) {
+            if heartRateLow {
                 HStack {
-                    Text("\(percentHealth)")
-                    ProgressView(value: Double(percentHealth), total: 200).progressViewStyle(DefaultProgressViewStyle()).tint(Color("mainButton")).frame(width: 130)
-                        .onChange(of: workoutSession.heartbeatFormatter()) { newValue in
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            if workoutSession.status == .inProgress {
+                    Image(systemName: "exclamationmark.triangle")
+                    Text("heart rate too low")
+                }
+            } else if heartRateHigh {
+                HStack {
+                    Image(systemName: "exclamationmark.triangle")
+                    Text("heart rate too high")
+                }
+                
+            }
+            Image("monster").resizable().frame(width: 100, height: 120)
+            HStack {
+                Text("\(percentHealth)")
+                ProgressView(value: Double(percentHealth), total: 15000).progressViewStyle(DefaultProgressViewStyle()).tint(Color("mainButton")).frame(width: 130)
+                    .onChange(of: workoutSession.heartbeatFormatter()) { newValue in
+                        if workoutSession.status == .inProgress {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                 let beatRate = Int(workoutSession.heartbeatFormatter())
                                 if beatRate != 0 {
                                     if (beatRate!) > 80 && (beatRate!) < maxHeartRate {
@@ -48,68 +44,60 @@ struct MonsterGameVIew: View {
                                         heartRateLow = false
                                         heartRateHigh = false
                                         if percentHealth - temp > 0 {
+                                            sounController.hitMonster()
                                             withAnimation(.spring()) {
                                                 percentHealth -= temp
+                                                
                                                 if NotReducedBefore {
                                                     NotReducedBefore = false
                                                 }
                                             }
-
+                                            
                                         } else {
+                                            sounController.win()
                                             workoutSession.endWorkoutSession()
                                             goToSummary = true
                                         }
                                         print("percent: \(percentHealth)")
                                     } else {
                                         print("masuk")
-                                        if beatRate! < 80 {
+                                        if beatRate! <= 80 {
                                             heartRateLow = true
                                             heartRateHigh = false
-                                        } else {
+                                        } else if beatRate! >= maxHeartRate {
                                             heartRateLow = false
                                             heartRateHigh = true
                                         }
-                                        if !NotReducedBefore && percentHealth == 200 {
-                                            workoutSession.endWorkoutSession()
-                                            goToSummary = true
-                                        } else if !NotReducedBefore && percentHealth < 200 {
+                                        if !NotReducedBefore {
+                                            sounController.heal()
                                             withAnimation(.spring()) {
                                                 percentHealth += 5
+                                                
+                                            }
+                                            if percentHealth >= 15000 {
+                                                sounController.gameOver()
+                                                workoutSession.endWorkoutSession()
+                                                goToSummary = true
                                             }
                                         }
                                         
-
+                                        
                                     }
                                 }
                             }
                         }
-
+                        
+                        
                     }
-                }
             }
-        } else if workoutSession.status == .paused {
-            VStack(spacing: 10) {
-                Spacer()
-                
-                if heartRateLow {
-                    HStack {
-                        Image(systemName: "exclamationmark.triangle")
-                        Text("heart rate too low")
-                    }
-                } else if heartRateHigh {
-                    HStack {
-                        Image(systemName: "exclamationmark.triangle")
-                        Text("heart rate too high")
-                    }
-                    
-                }
-
-                Image("monster").resizable().frame(width: 110, height: 130)
-                HStack {
-                    Text("\(percentHealth)")
-                    ProgressView(value: Double(percentHealth), total: 200).progressViewStyle(DefaultProgressViewStyle()).tint(Color("mainButton")).frame(width: 130)
-                }
-            }
+//            HStack{
+//                Circle()
+//                    .frame(width: 8, height: 8)
+//                    .foregroundColor(Color.gray)
+//                Circle()
+//                    .frame(width: 8, height: 8)
+//                    .foregroundColor(Color.white)
+//            }
         }
     }
 }

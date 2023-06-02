@@ -14,7 +14,7 @@ struct SummaryView: View {
     @Binding var countTimer: Int
     @State var highscoreDicts: [String: Int] = [:]
     var maxHeartRate: Int = 0
-    var percentHealth: Int = 200
+    var percentHealth: Int = 15000
     @Binding var ageInput: Int
     var body: some View {
         NavigationView {
@@ -22,12 +22,12 @@ struct SummaryView: View {
                 Text("Summary").font(.system(size: 18).bold()).padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 100))
                 ScrollView {
                     VStack(spacing: 3) {
-                        Text(percentHealth == 200 ? "Game Over!!" : "You Win!!!").font(.system(size: 17).bold()).foregroundColor(Color("mainButton"))
-                        if percentHealth == 200 {
+                        Text(percentHealth >= 15000 ? "Game Over!!" : "You Win!!!").font(.system(size: 17).bold()).foregroundColor(Color("mainButton"))
+                        if percentHealth >= 15000 {
                             Text("highScore: \(highscoreDicts[String(ageInput)] ?? 0)").font(.system(size: 15).bold())
                         } else {
-                            Text("Score: \(500 - countTimer)").font(.system(size: 15))
-                            Text("HighScore: \(highscoreDicts[String(ageInput)] ?? 0 == 0 ? 500 - countTimer : highscoreDicts[String(ageInput)] ?? 0)").font(.system(size: 15))
+                            Text("Score: \(4000 - countTimer)").font(.system(size: 15))
+                            Text("HighScore: \(highscoreDicts[String(ageInput)] ?? 0 == 0 ? 4000 - countTimer : highscoreDicts[String(ageInput)] ?? 0)").font(.system(size: 15))
                         }
                         
                     }
@@ -70,8 +70,8 @@ struct SummaryView: View {
                     highscoreDicts[String(highscore.age)] = Int(highscore.highscore)
                 }
                 
-                if percentHealth != 200 {
-                    let score = 500 - countTimer
+                if percentHealth != 15000 {
+                    let score = 4000 - countTimer
                     
                     if highscoreDicts[String(ageInput)] == nil {
                         highscoreDicts[String(ageInput)] = score
@@ -82,7 +82,7 @@ struct SummaryView: View {
             } else {
                 let highscore = Highscore(context: manageObjContext)
                 highscore.age = Int32(ageInput)
-                highscore.highscore = Int32(500 - countTimer)
+                highscore.highscore = Int32(4000 - countTimer)
                 highscoreDicts[String(highscore.age)] = Int(highscore.highscore)
             }
             do {

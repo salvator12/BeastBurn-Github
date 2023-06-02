@@ -21,7 +21,11 @@
 		FA4236172A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA4236152A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodeld */; };
 		FA42361B2A1EFF45005DC1B2 /* HSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42361A2A1EFF45005DC1B2 /* HSController.swift */; };
 		FA4A93B82A1DBD80005CD605 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A93B72A1DBD80005CD605 /* SummaryView.swift */; };
-		FAB26A3D2A1CF9F9005011B0 /* WorkoutControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB26A3C2A1CF9F9005011B0 /* WorkoutControlView.swift */; };
+		FA59E3E42A25E5E700A7B022 /* heal-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA59E3E32A25E5E700A7B022 /* heal-up.mp3 */; };
+		FA7B60292A221E1F008BEB76 /* PageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B60282A221E1F008BEB76 /* PageManager.swift */; };
+		FAAE149B2A26603300DA000C /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAAE14982A26603300DA000C /* hit.mp3 */; };
+		FAAE149C2A26603300DA000C /* gameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAAE14992A26603300DA000C /* gameOver.mp3 */; };
+		FAAE149D2A26603300DA000C /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAAE149A2A26603300DA000C /* win.mp3 */; };
 		FAB7AEAA2A1769AA00F2E42C /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7AEA92A1769AA00F2E42C /* WorkoutView.swift */; };
 		FACD197F2A1677E700956903 /* BeastBurn Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FACD197E2A1677E700956903 /* BeastBurn Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FACD19842A1677E700956903 /* HeartRateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD19832A1677E700956903 /* HeartRateApp.swift */; };
@@ -70,7 +74,11 @@
 		FA4236162A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HighScoreModel.xcdatamodel; sourceTree = "<group>"; };
 		FA42361A2A1EFF45005DC1B2 /* HSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSController.swift; sourceTree = "<group>"; };
 		FA4A93B72A1DBD80005CD605 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
-		FAB26A3C2A1CF9F9005011B0 /* WorkoutControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutControlView.swift; sourceTree = "<group>"; };
+		FA59E3E32A25E5E700A7B022 /* heal-up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "heal-up.mp3"; sourceTree = "<group>"; };
+		FA7B60282A221E1F008BEB76 /* PageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageManager.swift; sourceTree = "<group>"; };
+		FAAE14982A26603300DA000C /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hit.mp3; sourceTree = "<group>"; };
+		FAAE14992A26603300DA000C /* gameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameOver.mp3; sourceTree = "<group>"; };
+		FAAE149A2A26603300DA000C /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		FAB7AEA92A1769AA00F2E42C /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		FACD19782A1677E700956903 /* BeastBurn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeastBurn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD197E2A1677E700956903 /* BeastBurn Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeastBurn Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +103,10 @@
 		FA38880D2A1C71D800424AB0 /* Audio BeastBurn */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE14992A26603300DA000C /* gameOver.mp3 */,
+				FAAE14982A26603300DA000C /* hit.mp3 */,
+				FAAE149A2A26603300DA000C /* win.mp3 */,
+				FA59E3E32A25E5E700A7B022 /* heal-up.mp3 */,
 				FA0C80342A1FBBEE000721E0 /* 1.mp3 */,
 				FA0C80352A1FBBEE000721E0 /* 2.mp3 */,
 				FA0C80332A1FBBEE000721E0 /* 3.mp3 */,
@@ -124,6 +136,7 @@
 		FAB26A3A2A1CF59E005011B0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FA7B60282A221E1F008BEB76 /* PageManager.swift */,
 				FA0C802E2A1FA974000721E0 /* SoundPlaying.swift */,
 			);
 			path = Utilities;
@@ -139,7 +152,6 @@
 				FA030D612A1D2897004907AF /* MonsterGameVIew.swift */,
 				FA4A93B72A1DBD80005CD605 /* SummaryView.swift */,
 				FAB7AEA92A1769AA00F2E42C /* WorkoutView.swift */,
-				FAB26A3C2A1CF9F9005011B0 /* WorkoutControlView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,10 +286,14 @@
 			files = (
 				FA0C803A2A1FBBEE000721E0 /* Go.mp3 in Resources */,
 				FA0C80382A1FBBEE000721E0 /* 1.mp3 in Resources */,
+				FAAE149B2A26603300DA000C /* hit.mp3 in Resources */,
 				FA0C80372A1FBBEE000721E0 /* 3.mp3 in Resources */,
+				FA59E3E42A25E5E700A7B022 /* heal-up.mp3 in Resources */,
+				FAAE149D2A26603300DA000C /* win.mp3 in Resources */,
 				FA0C80392A1FBBEE000721E0 /* 2.mp3 in Resources */,
 				FACD198B2A1677E800956903 /* Preview Assets.xcassets in Resources */,
 				FACD19882A1677E800956903 /* Assets.xcassets in Resources */,
+				FAAE149C2A26603300DA000C /* gameOver.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +306,10 @@
 			files = (
 				FA4236172A1EFEDB005DC1B2 /* HighScoreModel.xcdatamodeld in Sources */,
 				FA0C80312A1FACF0000721E0 /* SoundController.swift in Sources */,
-				FAB26A3D2A1CF9F9005011B0 /* WorkoutControlView.swift in Sources */,
 				FACD19842A1677E700956903 /* HeartRateApp.swift in Sources */,
 				FAB7AEAA2A1769AA00F2E42C /* WorkoutView.swift in Sources */,
 				FA38880C2A1C638300424AB0 /* CountdownView.swift in Sources */,
+				FA7B60292A221E1F008BEB76 /* PageManager.swift in Sources */,
 				FA42361B2A1EFF45005DC1B2 /* HSController.swift in Sources */,
 				FA0C802F2A1FA974000721E0 /* SoundPlaying.swift in Sources */,
 				FAD8F5D22A1B523C00206396 /* MainPageView.swift in Sources */,

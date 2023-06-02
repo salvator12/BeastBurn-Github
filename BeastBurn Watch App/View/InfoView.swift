@@ -17,7 +17,7 @@ struct InfoView: View {
                 Text("you have to do some certain activity and let's your heart rate become your attack power to defeat the enemy. the amount of attack power based on how high your heart rate is").font(.system(size: 15)).foregroundColor(Color("softWhite"))
                 Divider().frame(height: 1).overlay(Color("softCream"))
                 Text("WARNING!!!").fontWeight(.semibold).foregroundColor(Color("softCream"))
-                Text("if heart rate exceeds \(calcMaxHeartRate()) or below 80, the monster will be healed").font(.system(size: 15)).foregroundColor(Color("softWhite"))
+                Text("if heart rate is greater than equal to \(calcMaxHeartRate()) or less than equal to 80, the monster will be healed").font(.system(size: 15)).foregroundColor(Color("softWhite"))
             }.frame(width: 160)
             Rectangle().fill(Color.black).frame(height: 1)
             NavigationLink(destination: CountdownView(ageInput: $ageInput, maxHeartRate: Int(maxHeartRate) ?? 0).navigationBarHidden(true).navigationBarBackButtonHidden(true), label: {
